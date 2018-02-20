@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "384937080992",
+    "firebase_url": "https://bookia-368c0.firebaseio.com",
+    "project_id": "bookia-368c0",
+    "storage_bucket": "bookia-368c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:384937080992:android:384397b824f26c57",
+        "android_client_info": {
+          "package_name": "com.example.yuki.bookia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "384937080992-1sl868q7a37m0lp4cji3nm2loavgavae.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.yuki.bookia",
+            "certificate_hash": "508cd1927a43caec686cfb98ec89dba2ca8baaaf"
+          }
+        },
+        {
+          "client_id": "384937080992-svk4748qnumoourigoa60o8seu2ce8q2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAah9EDaIml4mtVmpbOBs_qVVqxhrn4MFw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "384937080992-svk4748qnumoourigoa60o8seu2ce8q2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
