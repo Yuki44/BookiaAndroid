@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.yuki.bookia.MainActivity">
-
-    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+    android:layout_height="wrap_content"
+    tools:context="com.example.yuki.bookia.MainActivity">
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab"
@@ -26,28 +21,34 @@
             app:rippleColor="@android:color/holo_green_dark"
             app:srcCompat="@android:drawable/ic_menu_add" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:contentDescription="TODO"
-            android:scaleType="centerCrop"
-            app:srcCompat="@android:color/holo_blue_bright" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:contentDescription="TODO"
+        android:scaleType="centerCrop"
+        app:srcCompat="@mipmap/retouched" />
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/ic_launcher_background"
-            android:clipToPadding="false"
-            android:paddingTop="200dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingTop="200dp">
 
-            <LinearLayout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/book_list"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#fff"
-                android:orientation="vertical" />
+                android:layout_height="match_parent" />
+        </LinearLayout>
 
-        </ScrollView>
+
+    </ScrollView>
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -57,4 +58,3 @@
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme" />
     </FrameLayout>
-</android.support.design.widget.CoordinatorLayout>
