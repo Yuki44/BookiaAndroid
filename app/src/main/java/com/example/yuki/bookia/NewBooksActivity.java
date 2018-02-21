@@ -1,5 +1,6 @@
 package com.example.yuki.bookia;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -45,26 +46,29 @@ public class NewBooksActivity extends AppCompatActivity {
                 String authorText = bAuthorText.getText().toString();
                 String yearText = bYearText.getText().toString();
 
+                if (!bookTitle.isEmpty() || !authorText.isEmpty() || !yearText.isEmpty()) {
 
-                Map<String, String> bookMap = new HashMap<>();
-                bookMap.put("title", bookTitle);
-                bookMap.put("author", authorText);
-                bookMap.put("year", yearText);
+                    Map<String, String> bookMap = new HashMap<>();
+                    bookMap.put("title", bookTitle);
+                    bookMap.put("author", authorText);
+                    bookMap.put("year", yearText);
 
-                bFirestore.collection("Books").add(bookMap).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                    @Override
-                    public void onSuccess(DocumentReference documentReference) {
-                        Toast.makeText(NewBooksActivity.this, "Book added!", Toast.LENGTH_SHORT).show();
+                    bFirestore.collection("Books").add(bookMap).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                        @Override
+                        public void onSuccess(DocumentReference documentReference) {
+                            Toast.makeText(NewBooksActivity.this, "Book added!", Toast.LENGTH_SHORT).show();
+                            Intent listBookIntent = new Intent(NewBooksActivity.this, MainActivity.class);
+                            startActivity(listBookIntent);
 
-
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        String error = e.getMessage();
-                        Toast.makeText(NewBooksActivity.this, "Error : " + error, Toast.LENGTH_SHORT).show();
-                    }
-                });
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            String error = e.getMessage();
+                            Toast.makeText(NewBooksActivity.this, "Error : " + error, Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
 
             }
         });

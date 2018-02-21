@@ -88,6 +88,12 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+//    public void runInfoActivity(BooksListAdapter.ViewHolder view)
+//    {
+//        Intent bookInfoIntent = new Intent(MainActivity.this, BookDetailActivity.class);
+//        startActivity(bookInfoIntent);
+//    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will

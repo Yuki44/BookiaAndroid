@@ -18,6 +18,7 @@ public class BooksListAdapter extends RecyclerView.Adapter<BooksListAdapter.View
 
     public List<Books> booksList;
     public Context context;
+    private MainActivity mainActivity;
 
     public BooksListAdapter(Context context, List<Books> booksList) {
         this.booksList = booksList;
@@ -37,11 +38,13 @@ public class BooksListAdapter extends RecyclerView.Adapter<BooksListAdapter.View
 
         final String book_id = booksList.get(position).bookId;
 
+
         holder.bView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                // TODO
+                //TODO
+
                 Toast.makeText(context, "Book ID : " + book_id, Toast.LENGTH_SHORT).show();
             }
         });

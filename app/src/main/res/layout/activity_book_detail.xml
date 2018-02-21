@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.yuki.bookia.BookDetailActivity">
+
+    <ImageView
+        android:id="@+id/bookImageInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:padding="10dp"
+        app:srcCompat="@mipmap/charlie_chocolate" />
+
+    <TextView
+        android:id="@+id/bookTitleInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bookImageInfo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/nunito_semibold"
+        android:hint="Title"
+        android:textColor="@android:color/black"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/bookAuthorInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bookYearInfo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="14dp"
+        android:fontFamily="@font/nunito_semibold"
+        android:hint="Author"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/bookYearInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:fontFamily="@font/nunito_semibold"
+        android:hint="Year"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/bookDescriptionInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bookYearInfo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nunito_semibold"
+        android:hint="Description"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/bookCommentInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bookDescriptionInfo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nunito_semibold"
+        android:hint="Comment"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/bookIsbnInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/deleteBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="28dp"
+        android:fontFamily="@font/nunito_semibold"
+        android:hint="ISBN"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/deleteBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="21dp"
+        android:layout_marginStart="29dp"
+        android:layout_toEndOf="@+id/bookImageInfo"
+        android:text="Delete" />
+</RelativeLayout>
