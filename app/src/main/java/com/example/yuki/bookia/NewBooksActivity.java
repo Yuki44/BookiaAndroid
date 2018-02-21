@@ -42,8 +42,8 @@ public class NewBooksActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String bookTitle = bBookTitle.getText().toString();
-                String authorText = bAuthorText.getText().toString();
+                String bookTitle = bBookTitle.getText().toString().trim();
+                String authorText = bAuthorText.getText().toString().trim();
                 String yearText = bYearText.getText().toString();
 
                 if (!bookTitle.isEmpty() || !authorText.isEmpty() || !yearText.isEmpty()) {
@@ -59,6 +59,7 @@ public class NewBooksActivity extends AppCompatActivity {
                             Toast.makeText(NewBooksActivity.this, "Book added!", Toast.LENGTH_SHORT).show();
                             Intent listBookIntent = new Intent(NewBooksActivity.this, MainActivity.class);
                             startActivity(listBookIntent);
+                            finish();
 
                         }
                     }).addOnFailureListener(new OnFailureListener() {
@@ -68,6 +69,9 @@ public class NewBooksActivity extends AppCompatActivity {
                             Toast.makeText(NewBooksActivity.this, "Error : " + error, Toast.LENGTH_SHORT).show();
                         }
                     });
+                } else {
+
+                    Toast.makeText(NewBooksActivity.this, "Did you forget anything?", Toast.LENGTH_SHORT).show();
                 }
 
             }

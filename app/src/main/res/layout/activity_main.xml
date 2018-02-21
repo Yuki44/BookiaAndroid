@@ -7,19 +7,19 @@
     android:layout_height="wrap_content"
     tools:context="com.example.yuki.bookia.MainActivity">
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="@dimen/fab_margin"
-            android:clickable="true"
-            android:elevation="6dp"
-            android:focusable="true"
-            app:backgroundTint="@android:color/holo_green_light"
-            app:elevation="@dimen/fab_margin"
-            app:rippleColor="@android:color/holo_green_dark"
-            app:srcCompat="@android:drawable/ic_menu_add" />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:clickable="true"
+        android:elevation="6dp"
+        android:focusable="true"
+        app:backgroundTint="@android:color/holo_green_light"
+        app:elevation="@dimen/fab_margin"
+        app:rippleColor="@android:color/holo_green_dark"
+        app:srcCompat="@mipmap/cross" />
 
     <ImageView
         android:id="@+id/imageView"

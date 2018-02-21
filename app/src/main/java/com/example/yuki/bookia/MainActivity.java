@@ -19,6 +19,8 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 
@@ -44,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         bBookList = findViewById(R.id.book_list);
         bBookList.setHasFixedSize(true);
+
         bBookList.setLayoutManager(new LinearLayoutManager(this));
         bBookList.setAdapter(booksListAdapter);
 
@@ -64,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
                         Books books = doc.getDocument().toObject(Books.class).withId(book_id);
                         booksList.add(books);
-
+                        sortArrayList();
                         booksListAdapter.notifyDataSetChanged();
                     }
                 }
@@ -80,6 +83,19 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+    private void sortArrayList() {
+        Collections.sort(booksList, new Comparator<Books>() {
+            @Override
+            public int compare(Books o1, Books o2) {
+                return o1.getTitle().compareTo(o2.getTitle());
+            }
+        });
+        booksListAdapter.notifyDataSetChanged();
+        //TODO
+        //TO FIX BOOKS 10, 11, 12 SHOWING UP BEFORE BOOKS 2, 3, 4 ETC.
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
